@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo!</title>
+    <link rel="stylesheet" href="/game/styles.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>const socket = io();</script>
+
+    <script src="/vue/dev.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="/"><h1>Bingo!</h1></a>
+        <button 
+            id="voteButton" 
+            v-if="!roomData.started" 
+            :class="{ 'notVoted': !roomData.data[userId]?.voted }"
+            @click="toggleVote">
+            Vote to start Game ({{ voteCount }}/{{ roomData.users.length }})
+        </button>
+        <p>Game Code: {{ GAME_CODE }}</p>
+    </header>
+
+
+    <div id="island" v-if="roomData.started">
+        
+        <h1>{{ currentNumber }}</h1>
+        <br />
+        <table>
+            <tbody>
+            <tr v-for="row in 5" :key="row">
+                <td v-for="col in 5" :key="col" :class="{ 'selected': grid[`${row-1}_${col-1}`].selected }">
+                    <div :id="`${row}_${col}`" @click="clickCell(row-1, col-1)" >
+                        <h1>{{ grid[`${row-1}_${col-1}`].value }}</h1>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

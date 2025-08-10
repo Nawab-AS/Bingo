@@ -4,12 +4,13 @@
   "description": "A simple multiplayer bingo game",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js --ignore public/",
     "start": "node server.js"
   },
   "author": "Nawab-AS",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "socket.io": "^4.8.1"
   },

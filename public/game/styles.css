@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f0f0f0;
+    --border-radius: 7px;
+    --island-width: 300px;
+    --button-bg-color: #4CAF50;
+    --button-disabled-bg-color: #e01616;
+    --button-text-color: #ffffff;
+    --input-border-color: #ccc;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+
+header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 8%;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    height: min-content;
+    margin: 10px;
+}
+
+#voteButton {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#voteButton.notVoted {
+    background-color: var(--button-disabled-bg-color);
+}
+
+
+#island {
+    height: 85%;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    display: block;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: #555 1px solid;
+    background: #dee2e6;
+    transition-duration: 0.5s;
+}
+
+.selected {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+td h1 {
+    text-align: center;
+}
