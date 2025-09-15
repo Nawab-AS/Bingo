@@ -37,6 +37,10 @@ Optionally you can also use the heroku cli as well with
 heroku local
 ```
 
+## Screenshots
+
+![Bingo game](https://hc-cdn.hel1.your-objectstorage.com/s/v3/c3410b9ad5822bb6879285d8bfda44ac90e67236_image.png)
+
 ## Questions or Concerns
 
 For any questions or concerns please email me at nawab-as@hackclub.app
