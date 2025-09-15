@@ -2,7 +2,9 @@
 
 # Bingo
 
-This is a simple bingo game that uses socket.io. The purpose of this project is to allow me to learn how to use socket.io (as opposed to websockets).
+This is a simple bingo game that uses socket.io.
+
+This project was made for [Shipwrecked](https://shipwrecked.hackclub.com/).
 
 ## Live Demo
 
